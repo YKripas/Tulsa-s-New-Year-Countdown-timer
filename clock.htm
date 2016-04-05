@@ -29,7 +29,7 @@
             
            function NYClock(){
             //the today variable contains the current date and time
-               var today= new Date("February 24, 1655 14:35:05");
+               var today= new Date();
                
             //display the current date and time
               document.clockform.dateNow.value = showDate(today);
@@ -56,7 +56,7 @@
 
    </head>
 
-   <body onload="NYClock()">
+   <body onload="setInterval('NYClock()', 1000)">
       <form name="clockform" id="clockform" action="">
 
       <header>
