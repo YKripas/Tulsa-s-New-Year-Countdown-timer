@@ -18,4 +18,17 @@
       of the next year
 
 */
+function showDate(dateObj) {
+    thisDate=dateObj.getDate();
+    thisMonth=dateObj.getMonth()+1;
+    thisYear=dateObj.getFullYear();
+        return thisMonth + "/" + thisDate + "/" + thisYear;
+}
+
+function showTime(dateObj) {
+    thisSecond=dateObj.getSeconds();
+    thisMinute=dateObj.getMinutes();
+    thisHour=dateObj.getHours();
+        return thisHour + ":" + thisMinute + ":" + thisSecond;
+}
 
