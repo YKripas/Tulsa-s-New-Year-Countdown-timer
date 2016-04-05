@@ -36,7 +36,8 @@
               document.clockform.timeNow.value = showTime(today);
                
             //calculate the time left until the New Year's Eve Bash
-               document.clockform.daysLeft.value = "99 day(s)";
+               var days = calcDays(today);
+               document.clockform.daysLeft.value = days + " day(s)";
                document.clockform.hrsLeft.value = "99 hours(s)";
                document.clockform.minsLeft.value = "99 minute(s)";
                document.clockform.secsLeft.value = "99 second(s)";
