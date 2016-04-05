@@ -39,9 +39,18 @@
                var days = calcDays(today);
                //display days rounded to the next lowest integer
                document.clockform.daysLeft.value = Math.floor(days) + " day(s)";
-               document.clockform.hrsLeft.value = "99 hours(s)";
-               document.clockform.minsLeft.value = "99 minute(s)";
-               document.clockform.secsLeft.value = "99 second(s)";
+               //calculate the hours left in the current day
+               var hours = (days - Math.floor(days))* 24;
+               //display hours rounded to the next lowest integer
+               document.clockform.hrsLeft.value = Math.floor(hours) + " hours(s)";
+               //calculate the minutes left in the current hour
+               var minutes = (hours - Math.floor(hours))*60;
+               //display minutes rounded to the next lowest integer
+               document.clockform.minsLeft.value = Math.floor(minutes) + " minute(s)";
+               //calculate the seconds left in the current minute
+               var seconds = (minutes - Math.floor(minutes))*60;
+               //display seconds rounded to the next lowest integer
+               document.clockform.secsLeft.value = Math.floor(seconds) + " second(s)";
            }
        </script>
 
