@@ -20,6 +20,9 @@
       <meta charset="UTF-8" />
       <title>Tulsa's New Year's Bash</title>
       <script src="modernizr-1.5.js" type="text/javascript" ></script>
+       
+       <script src="functions.js" type="text/javascript">
+       </script>
 
       <link href="newyear.css" rel="stylesheet" type="text/css" />
        <script type="text/javascript">
@@ -29,8 +32,8 @@
                var today= new Date("February 24, 1655 14:35:05");
                
             //display the current date and time
-              document.clockform.dateNow.value = "99";
-              document.clockform.timeNow.value = "99";
+              document.clockform.dateNow.value = showDate(today);
+              document.clockform.timeNow.value = showTime(today);
                
             //calculate the time left until the New Year's Eve Bash
                document.clockform.daysLeft.value = "99 day(s)";
