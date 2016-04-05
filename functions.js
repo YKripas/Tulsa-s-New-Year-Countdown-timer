@@ -32,3 +32,13 @@ function showTime(dateObj) {
         return thisHour + ":" + thisMinute + ":" + thisSecond;
 }
 
+function calcDays(currentDate) {
+    //create a Date object for January 1 of the next year
+    newYear = new Date("January 1, 2015");
+    nextYear = currentDate.getFullYear()+1;
+    newYear.setFullYear(nextYear);
+    //calculate the difference between currentDate and January !
+    days = (newYear - currentDate)/(1000*60*60*24);
+    return days;
+}
+
