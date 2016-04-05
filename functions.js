@@ -38,6 +38,10 @@ function showTime(dateObj) {
     //3)if thisHOur equals 0, change it to 12
     thisHour = (thisHour == 0) ? 12 : thisHour;
     
+    //add leading zeros to minutes and seconds less than 10
+    thisMinute = thisMinute < 10 ? "0" + thisMinute : thisMinute;
+    thisSecond = thisSecond < 10 ? "0" + thisSecond : thisSecond;
+    
         return thisHour + ":" + thisMinute + ":" + thisSecond + ampm;
 }
 
