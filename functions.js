@@ -29,7 +29,16 @@ function showTime(dateObj) {
     thisSecond=dateObj.getSeconds();
     thisMinute=dateObj.getMinutes();
     thisHour=dateObj.getHours();
-        return thisHour + ":" + thisMinute + ":" + thisSecond;
+    
+    //change thisHour from 24-hour time to 12-hour time by:
+    //1) if thisHOur < 12 then set ampm to " a.m." otherwise set it to "p.m."
+    var ampm = (thisHour < 12 ) ? " a.m." : " p.m.";
+    //2) if thisHOur > 12 then subtract 12 from the thisHour variable 
+    thisHour = (thisHour > 12) ? thisHour - 12 : thisHour;
+    //3)if thisHOur equals 0, change it to 12
+    thisHour = (thisHour == 0) ? 12 : thisHour;
+    
+        return thisHour + ":" + thisMinute + ":" + thisSecond + ampm;
 }
 
 function calcDays(currentDate) {
